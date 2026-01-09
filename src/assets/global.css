@@ -1,0 +1,229 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+  --primary: #1e3a8a;
+  --secondary: #2563eb;
+  --bg: #f1f5f9;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e5e7eb;
+}
+
+/* BASE */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1.5rem 1rem;
+}
+
+/* HEADER */
+header {
+  background: var(--primary);
+  color: white;
+}
+
+main {
+  flex: 1;
+}
+
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* MAIN */
+main {
+  min-height: calc(100vh - 140px);
+}
+
+/* TÍTULOS */
+h1 {
+  margin-bottom: 1rem;
+  
+}
+
+h2{
+
+  margin-top: 16px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* FORMULÁRIOS */
+form {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.8rem;
+  align-items: end;
+}
+
+input, select {
+  padding: 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* BOTÕES */
+button {
+  padding: 0.5rem 0.9rem;
+  margin: 2px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--secondary);
+}
+
+.btn-danger {
+  background: #dc2626;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}
+
+/* LISTA / CRUD */
+.list {
+  background: var(--card);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 1rem;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+/* FOOTER */
+footer {
+  background: #020617;
+  color: #e5e7eb;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+
+/* SOLUÇÃO: Muda isto no teu CSS */
+
+
+  nav ul {
+    gap: 1rem;
+  }
+}
+
+
+
+
+/* LISTA */
+.list {
+  background: var(--card);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 1rem;
+}
+
+/* CABEÇALHO */
+.list-header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr 1fr 2fr;
+  gap: 12px;
+  background: #e5e7eb;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* LINHAS */
+.list-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr 1fr 2fr;
+  gap: 12px;
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: center;
+}
+
+.list-row:hover {
+  background: #f9fafb;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
